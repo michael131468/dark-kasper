@@ -363,16 +363,16 @@ kbd {
     display: inline-block;
     margin-bottom: 0.4em;
     padding: 1px 8px;
-    border: #CCC 1px solid;
-    color: #666;
-    text-shadow: #FFF 0 1px 0;
+    border: #3d3d3d 1px solid;
+    color: #d1d1d1;
+    text-shadow: #fff 0 1px 0;
     font-size: 0.9em;
-    font-weight: 700;
-    background: #F4F4F4;
+    font-weight: 400;
+    background: #494949;
     border-radius: 4px;
     box-shadow:
         0 1px 0 rgba(0, 0, 0, 0.2),
-        0 1px 0 0 #fff inset;
+        0 1px 0 0 #000 inset;
 }
 
 table {
