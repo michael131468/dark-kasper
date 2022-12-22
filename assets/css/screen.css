@@ -1492,14 +1492,14 @@ body:not(.post-template) .post-title {
         height: 44px;
         line-height: 41px;
         border-radius: 0;
-        color: #2e2e2e;
+        color: #ababab;
         background: transparent;
     }
     .back-button:hover,
     .subscribe-button:hover {
-        border-color: #ebeef0;
-        color: #2e2e2e;
-        background: #ebeef0;
+        border-color: #464748;
+        color: #ababab;
+        background: #464748;
     }
 
     .back-button {
