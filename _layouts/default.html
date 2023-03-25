@@ -15,21 +15,34 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
     <!-- Customisation  -->
     <link rel="stylesheet" type="text/css" href="{{'/assets/css/main.css' | relative_url}} " />
-
+    {% if page.galleries.size > 0 %}
+    <link rel="stylesheet" href="{{'/assets/css/photoswipe/photoswipe.css' | relative_url}}">
+    <script src="{{'/assets/js/imagesloaded/imagesloaded.pkgd.min.js' | relative_url}}"></script>
+    <script src="{{'/assets/js/masonry/masonry.pkgd.min.js' | relative_url}}"></script>
+    <style>
+        .grid-item {
+            width: 210px;
+            margin-bottom: 5px;
+        }
+        .grid {
+            margin-bottom: 20px;
+        }
+    </style>
+    {% endif %}
 </head>
 <body class="{% if page.post_class %}{{page.post_class}}{% else %}home-template{% endif %}">
 
     {{ content }}
     <footer class="site-footer clearfix">
       <section class="copyright">
-        <a href="{{ site.baseurl }}">{{ site.name }}</a> &copy; 
+        <a href="{{ site.baseurl }}">{{ site.name }}</a> &copy;
               {{"now" | date: "%Y"}} &bull; All rights reserved.
       </section>
-      <section class="poweredby">Made with Jekyll using 
+      <section class="poweredby">Made with Jekyll using
         <a href="http://github.com/rosario/kasper">Kasper theme</a>
       </section>
     </footer>
-    
+
     <script type="text/javascript" src="{{'/assets/js/jquery-1.11.1.min.js' | relative_url}}"></script>
     <script type="text/javascript" src="{{'/assets/js/jquery.fitvids.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{'/assets/js/index.js' | relative_url }}"></script>
@@ -47,6 +60,33 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
 
-    </script>   
+    </script>
+    {% if page.galleries.size > 0 %}
+    <script type="module">
+      import PhotoSwipeLightbox from '{{"/assets/js/photoswipe/photoswipe-lightbox.esm.min.js" | relative_url}}';
+      import PhotoSwipe from '{{"/assets/js/photoswipe/photoswipe.esm.min.js" | relative_url}}';
+
+      {% for gallery_id in page.galleries %}
+      const lightbox_{{gallery_id}} = new PhotoSwipeLightbox({
+        gallery: '#gallery-{{gallery_id}}',
+        children: 'a',
+        pswpModule: PhotoSwipe
+      });
+      lightbox_{{gallery_id}}.init();
+      {% endfor %}
+    </script>
+    <script>
+      var elements = document.getElementsByClassName('grid');
+      imagesLoaded(document.querySelector('main'), function() {
+        var n = elements.length;
+        for (var i = 0; i < n; i++) {
+          msnry = new Masonry(elements[i], {
+            itemSelector: '.grid-item',
+            columnWidth: 230,
+          });
+        }
+      });
+    </script>
+    {% endif %}
 </body>
 </html>
