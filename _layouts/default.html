@@ -73,6 +73,7 @@
         children: 'a',
         pswpModule: PhotoSwipe
       });
+      const videoPlugin_{{gallery_id}} = new PhotoSwipeVideoPlugin(lightbox_{{gallery_id}}, {});
       lightbox_{{gallery_id}}.init();
       {% endfor %}
     </script>
