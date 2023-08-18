@@ -1,6 +1,11 @@
 FROM fedora:37
 
 RUN dnf install -y \
+    https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-37.noarch.rpm \
+    https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-37.noarch.rpm
+
+RUN dnf install -y \
+    ffmpeg \
     ImageMagick \
     perl-Image-ExifTool \
     python3 \
