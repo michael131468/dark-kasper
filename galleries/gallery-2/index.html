@@ -37,6 +37,7 @@
         </div>
         <script type="module">
           import PhotoSwipeLightbox from "http://127.0.0.1:4000/dark-kasper/assets/js/photoswipe/photoswipe-lightbox.esm.min.js";
+          import PhotoSwipeVideoPlugin from "http://127.0.0.1:4000/dark-kasper/assets/js/photoswipe/photoswipe-video-plugin.esm.min.js";
           import PhotoSwipe from "http://127.0.0.1:4000/dark-kasper/assets/js/photoswipe/photoswipe.esm.min.js";
 
           const lightbox = new PhotoSwipeLightbox({
@@ -44,6 +45,7 @@
             children: "a",
             pswpModule: PhotoSwipe
           });
+          const videoPlugin = new PhotoSwipeVideoPlugin(lightbox, {});
           lightbox.init();
         </script>
         <script>
