@@ -6,6 +6,7 @@ categories: Thriller Comedy Horror
 galleries:
   - one
   - two
+  - three
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
@@ -137,6 +138,22 @@ And here is another photo gallery.
   <div class="grid-item">
     <a href="{{ site.baseurl }}/galleries/gallery-2/simon-0EkEV2fKVCs-unsplash.jpg" data-pswp-width="4160" data-pswp-height="6240" target="_blank">
       <img src="{{ site.baseurl }}/galleries/gallery-2/thumbnail_simon-0EkEV2fKVCs-unsplash.jpg" alt="" />
+    </a>
+  </div>
+</div>
+
+And here is a video gallery.
+
+<div class="grid pswp-gallery" id="gallery-three">
+  <div class="grid-item">
+    <a href="{{ site.baseurl }}/galleries/gallery-3/pexels-baryslau-shoot-17821013%20%5B850664148%5D.mp4" data-pswp-video-src="{{ site.baseurl }}/galleries/gallery-3/pexels-baryslau-shoot-17821013%20%5B850664148%5D.mp4" data-pswp-width="1080" data-pswp-height="1920" data-pswp-type="video" target="_blank">
+      <img src="{{ site.baseurl }}/galleries/gallery-3/thumbnail_pexels-baryslau-shoot-17821013%20%5B850664148%5D.jpg" alt="" />
+    </a>
+  </div>
+
+  <div class="grid-item">
+    <a href="{{ site.baseurl }}/galleries/gallery-3/production%20ID%EF%BC%9A4926521%20%5B440541612%5D.mp4" data-pswp-video-src="{{ site.baseurl }}/galleries/gallery-3/production%20ID%EF%BC%9A4926521%20%5B440541612%5D.mp4" data-pswp-width="3840" data-pswp-height="2160" data-pswp-type="video" target="_blank">
+      <img src="{{ site.baseurl }}/galleries/gallery-3/thumbnail_production%20ID%EF%BC%9A4926521%20%5B440541612%5D.jpg" alt="" />
     </a>
   </div>
 </div>
