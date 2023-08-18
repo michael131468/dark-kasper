@@ -64,6 +64,7 @@
     {% if page.galleries.size > 0 %}
     <script type="module">
       import PhotoSwipeLightbox from '{{"/assets/js/photoswipe/photoswipe-lightbox.esm.min.js" | relative_url}}';
+      import PhotoSwipeVideoPlugin from '{{"/assets/js/photoswipe/photoswipe-video-plugin.esm.min.js" | relative_url}}';
       import PhotoSwipe from '{{"/assets/js/photoswipe/photoswipe.esm.min.js" | relative_url}}';
 
       {% for gallery_id in page.galleries %}
